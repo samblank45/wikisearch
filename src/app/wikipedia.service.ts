@@ -8,6 +8,7 @@ export class WikipediaService {
   constructor(private http: HttpClient) { }
 
   search(term: string) {
+    // http.get returns an observable
     return this.http.get('https://en.wikipedia.org/w/api.php', {
       params: {
         action: 'query',
